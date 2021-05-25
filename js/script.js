@@ -135,7 +135,7 @@ function addSearchBar() {
       <label for="search" class="student-search">
          <span>Search by name</span>
          <input id="search" placeholder="Search by name...">
-         <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+         <button id="searchButton" type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
       </label>
    `;
 
@@ -173,6 +173,22 @@ const search = document.getElementById('search');
 //Add event listener on keyup for the search input
 search.addEventListener('keyup', (e) => {
    let value = e.target.value;
+   dataSearch(value);
+   
+});
+//find search button
+const searchButton = document.getElementById('searchButton');
+//Add search button functionality
+searchButton.addEventListener('click', (e) => {
+   let value = document.getElementById('search').value;
+   dataSearch(value);
+});
+
+/**
+ * Filters the student data by the search bar
+ * @param {string} value 
+ */
+function dataSearch(value) {
    if (value != '') {
       let list = filterData(data, value);
       //show the filtered list data
@@ -186,4 +202,4 @@ search.addEventListener('keyup', (e) => {
       showPage(data, 1);
       addPagination(data);
    }
-});
+}
