@@ -127,7 +127,7 @@ ulLinkList.addEventListener('click', (e) => {
 });
 
 /**
- * 
+ * Adds the search bar to the main page
  */
 function addSearchBar() {
    const header = document.getElementsByClassName('header')[0];
