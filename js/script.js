@@ -108,7 +108,7 @@ function addPagination(list) {
    }
 
    //add the active class to the first item
-   ulLinkList.firstElementChild.className = 'active';
+   ulLinkList.classList = 'active';
 }
 
 //Adds a listener for when a page button is click to bring up the correct page
