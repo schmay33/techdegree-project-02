@@ -21,7 +21,7 @@ This function will create and insert/append the elements needed to display a "pa
  * @param  {number} page
  */
 function showPage(list, page) {
-   const start = (page * 9) - 9;
+   const start = (page * 9) - 9; 
    const end = page * 9;
 
    //Select the UL element with a class of student-list and assign its value to a variable.
@@ -164,7 +164,7 @@ function filterData(data, value) {
 
 
 // Call functions
-showPage(data, 1);
+showPage(data, 1); 
 addPagination(data);
 addSearchBar();
 
